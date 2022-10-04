@@ -2,10 +2,10 @@ import React from "react";
 import './Item.scss';
 
 
-function Item ({db}) {
+function Item ({arr}) {
 
-  const array = db.map(e => {
-    return <div className="item">{db.indexOf(e) + 1}</div>;
+  const array = arr.map(e => {
+    return <div className="item">{arr.indexOf(e) + 1}</div>;
   })
 
 
