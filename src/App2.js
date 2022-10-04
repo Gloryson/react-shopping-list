@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import array from './db/db';
 
 function App2({gg, arr}) {
 
   return (
     <button onClick={() => {
-      gg(); 
-      alert(arr)}}
+      array[0]++; 
+      alert(array)}}
       >
       GOGOGO
     </button>
