@@ -4,7 +4,7 @@ import './Item.scss';
 
 function Item ({arr}) {
 
-  const array = arr.map(e => {
+  let array = arr.map(e => {
     return <div className="item">{arr.indexOf(e) + 1}</div>;
   })
 
