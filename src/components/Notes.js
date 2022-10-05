@@ -4,14 +4,13 @@ import './Notes.scss';
 
 
 
-function Notes () {
-
+function Notes ({notes}) {
 
   return <>
     <div className="notes">
-      <Note/>
-      <Note/>
-      <Note/>
+      {notes.map((e, i) => {
+        return <Note value = {e} id = {i}/>;
+      })}
     </div>
   </>
 }

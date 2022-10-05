@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import Notes from './components/Notes';
+import db from './db';
 
 
 
 
 function App () {
 
+  const [notes, setNotes] = useState(db);
+
   return <>
-    <Notes/>
+    <Notes notes = {notes}/>
   </>
 }
 
