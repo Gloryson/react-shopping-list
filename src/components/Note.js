@@ -3,20 +3,19 @@ import './Note.scss';
 
 
 
-function Note ({value, id}) {
+function Note ({completeNote, value, id, completed, deleteNote}) {
 
   let classes = ['note__value'];
 
-  function ggg () {
-    if (classes.length > 1) classes = [...classes[0]];
-    else classes = [...classes, 'done'];
+  if (completed) {
+    classes = ['note__value', 'done'];
   }
 
   return <>
     <div className={"note"}>
-      <div className={classes.join` `}>{value}</div>
+      <div className={classes.join` `} onClick={() => completeNote(id)}>{value}</div>
       <div className="note__edit"></div>
-      <div className="note__delete" onClick={ggg}></div>
+      <div className="note__delete" onClick={() => deleteNote(id)}></div>
     </div>
   </>
 }

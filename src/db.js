@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import uuid from 'react-uuid';
 
 let db = [
   {id: uuid(), completed: false, value: 'Lorem ipsum dolor'},
