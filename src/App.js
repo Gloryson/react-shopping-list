@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.scss';
-import Item from './Item';
-import db from './db';
+import Notes from './components/Notes';
 
 
 
 
-function App() {
+function App () {
 
   return <>
-  <div className='container'>
-    
-  </div>
+    <Notes/>
   </>
 }
 

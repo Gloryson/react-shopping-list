@@ -1,0 +1,31 @@
+.note {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  max-width: 500px;
+  height: 50px;
+  box-shadow: #d7d7d7 0 0 5px 0;
+  padding: 1vh;
+  cursor: default;
+  position: relative;
+  gap: 5px;
+}
+
+.note__value {
+  font-size: 1.5rem;
+  width: 85%;
+}
+
+.note__edit, .note__delete {
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/img/edit.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.note__delete {
+  background-image: url(../assets/img/delete.png);
+}
