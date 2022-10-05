@@ -5,7 +5,20 @@ import './Notes.scss';
 
 
 
-function Notes ({completeNote, deleteNote, notes, editNote}) {
+function Notes ({notes, setNotes, inputValue, setInputValue, editNote}) {
+
+  function completeNote (id) {
+    setNotes(notes.map(note => {
+      if (note.id === id) {
+        note.completed = note.completed ? false : true;
+      }
+      return note;
+    }))
+  }
+
+  function deleteNote (id) {
+    setNotes(notes.filter(note => note.id != id));
+  }
 
   return <>
     <div className="notes">

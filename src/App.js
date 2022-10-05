@@ -11,43 +11,46 @@ function App () {
 
   const [notes, setNotes] = useState(db);
   const [inputValue, setInputValue] = useState(``);
-
-  function completeNote (id) {
-    setNotes(notes.map(note => {
-      if (note.id === id) {
-        note.completed = note.completed ? false : true;
-      }
-      return note;
-    }))
-  }
-
-  const deleteNote = (id) => setNotes(notes.filter(note => note.id != id));
+  const [classes, setClasses] = useState(['lol', 'off']);
+  const [isEdit, setIsEdit] = useState(null);
 
   function addNote (inputValue) {
-    let newNote = {id: uuid(), completed: false, value: inputValue}
-    setNotes([...notes, newNote]);
+    if (isEdit) {
+      setNotes(notes.map(note => {
+        if (isEdit === note.id) note.value = inputValue;
+        return note;
+      }))
+      setIsEdit(null);
+    } else {
+      setNotes([...notes, {id: uuid(), completed: false, value: inputValue}]);
+    }
+    setClasses(['lol', 'off']);
     setInputValue(``);
   }
 
-  function editNote (id) {
-    setNotes(notes.map(note => {
-      if (note.id === id) note.value = inputValue;
-      return note;
-    }))
-    setInputValue(``);
+  function editNote (id, value) {
+    setClasses(['lol']);
+    setIsEdit(id);
+    setInputValue(value);
   }
 
-  const changeItem = (event) => setInputValue(event.target.value);
+  function addNoteButton () {
+    setClasses(['lol'])
+  }
 
   return <>
     <Notes
       notes = {notes}
-      completeNote = {completeNote}
-      deleteNote = {deleteNote}
+      setNotes = {setNotes}
+      inputValue = {inputValue}
+      setInputValue = {setInputValue}
       editNote = {editNote}
     />
-    <input value={inputValue} onChange={event => changeItem(event)}></input>
-    <button onClick={() => addNote(inputValue)}>GO</button>
+    <div className={classes.join` `}>
+      <input value={inputValue} onChange={event => setInputValue(event.target.value)}></input>
+      <button onClick={() => addNote(inputValue)}>GO</button>
+    </div>
+    <button onClick={() => addNoteButton()}>+</button>
   </>
 }
 
