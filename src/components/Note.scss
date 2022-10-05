@@ -19,11 +19,14 @@
 .note__edit, .note__delete {
   width: 30px;
   height: 30px;
-  background-image: url(../assets/img/edit.png);
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center;
   cursor: pointer;
+}
+
+.note__edit {
+  background-image: url(../assets/img/edit.png);
 }
 
 .note__delete {
