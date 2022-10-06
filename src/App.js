@@ -48,13 +48,13 @@ function App () {
         setInputValue = {setInputValue}
         editNote = {editNote}
       />
+      <div className='add__button' onClick={() => addNoteButton()}></div>
       <Modal
         addNote={addNote}
         inputValue={inputValue}
         setInputValue={setInputValue}
         visible={visible}
       />
-      <div className='add__button' onClick={() => addNoteButton()}>ADD</div>
     </div>
   )
 }
