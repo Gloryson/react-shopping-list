@@ -1,11 +1,13 @@
 import uuid from 'react-uuid';
 
 let db = [
-  {id: uuid(), completed: false, value: 'Lorem ipsum dolor'},
-  {id: uuid(), completed: false, value: 'Ipsum dolor lorem'},
-  {id: uuid(), completed: false, value: 'Dolor ipsum lorem'},
-  {id: uuid(), completed: false, value: 'Dolor sit amet'},
-  {id: uuid(), completed: false, value: 'Ipsum dolor sit'}
+  {id: uuid(), completed: false, value: 'My name is Giovanni Giorgio'},
+  {id: uuid(), completed: false, value: 'But everybody calls me Giorgio'},
+  {id: uuid(), completed: false, value: 'Lorem ipsum dolor sit amet'}
 ];
+
+if (localStorage.getItem('notesArray')) {
+  db = JSON.parse(localStorage.getItem('notesArray'));
+}
 
 export default db;

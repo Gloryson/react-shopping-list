@@ -15,6 +15,10 @@ function App () {
   const [visible, setVisible] = useState(false);
   const [isEdit, setIsEdit] = useState(null);
 
+  React.useEffect(() => {
+    localStorage.setItem('notesArray', JSON.stringify(notes));
+  }, [notes]);
+
   function addNote (inputValue) {
     if (isEdit) {
       setNotes(notes.map(note => {
