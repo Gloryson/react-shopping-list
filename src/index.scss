@@ -23,8 +23,8 @@
 .notes {
   flex-direction: column;
   width: 100%;
-  padding: 3vh 0 2vh 0;
-  gap: 0.5vh;
+  padding: 20px 0 10px 0;
+  gap: 3.5px;
 }
 
 .note {
@@ -33,7 +33,7 @@
   height: 50px;
   border: 2px solid #d7d7d7;
   border-radius: 5px;
-  padding: 1vh;
+  padding: 7px;
   cursor: default;
   gap: 5px;
   background-color: #ffffff;
@@ -116,7 +116,7 @@ input, .ok__button {
 .modal__window {
   flex-direction: column;
   position: fixed;
-  gap: 1vh;
+  gap: 7px;
   top: 0;
   left: 0;
   width: 100%;
