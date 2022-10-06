@@ -16,7 +16,8 @@
   width: 85%;
 }
 
-.note__edit, .note__delete {
+.note__edit {
+  background-image: url(../assets/img/edit.png);
   width: 30px;
   height: 30px;
   background-repeat: no-repeat;
@@ -25,12 +26,14 @@
   cursor: pointer;
 }
 
-.note__edit {
-  background-image: url(../assets/img/edit.png);
-}
-
 .note__delete {
   background-image: url(../assets/img/delete.png);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  cursor: pointer;
 }
 
 .done {
