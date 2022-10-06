@@ -1,11 +1,11 @@
 import React from "react";
 import Note from "./Note";
-import './Notes.scss';
+import '../index.scss';
 
 
 
 
-function Notes ({notes, setNotes, inputValue, setInputValue, editNote}) {
+function Notes ({notes, setNotes, editNote}) {
 
   function completeNote (id) {
     setNotes(notes.map(note => {

@@ -1,11 +1,11 @@
 import React from "react";
-import './Note.scss';
+import '../index.scss';
 
 
 
 function Note ({value, id, completed, completeNote, deleteNote, editNote}) {
 
-  let classes = completed ? ['note__value', 'done'] : ['note__value'];
+  let classes = completed ? ['note__value', 'note__done'] : ['note__value'];
 
   return <>
     <div className={"note"}>

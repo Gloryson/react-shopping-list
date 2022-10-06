@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './App.scss';
-import Notes from './components/Notes';
+import './index.scss';
 import db from './db';
+import Notes from './components/Notes';
+import Modal from './components/Modal';
 import uuid from 'react-uuid';
 
 
@@ -11,7 +12,7 @@ function App () {
 
   const [notes, setNotes] = useState(db);
   const [inputValue, setInputValue] = useState(``);
-  const [classes, setClasses] = useState(['lol', 'off']);
+  const [visible, setVisible] = useState(false);
   const [isEdit, setIsEdit] = useState(null);
 
   function addNote (inputValue) {
@@ -24,34 +25,38 @@ function App () {
     } else {
       setNotes([...notes, {id: uuid(), completed: false, value: inputValue}]);
     }
-    setClasses(['lol', 'off']);
+    setVisible(false);
     setInputValue(``);
   }
 
   function editNote (id, value) {
-    setClasses(['lol']);
+    setVisible(true);
     setIsEdit(id);
     setInputValue(value);
   }
 
   function addNoteButton () {
-    setClasses(['lol'])
+    setVisible(true);
   }
 
-  return <>
-    <Notes
-      notes = {notes}
-      setNotes = {setNotes}
-      inputValue = {inputValue}
-      setInputValue = {setInputValue}
-      editNote = {editNote}
-    />
-    <div className={classes.join` `}>
-      <input value={inputValue} onChange={event => setInputValue(event.target.value)}></input>
-      <button onClick={() => addNote(inputValue)}>GO</button>
+  return (
+    <div className='container'>
+      <Notes
+        notes = {notes}
+        setNotes = {setNotes}
+        inputValue = {inputValue}
+        setInputValue = {setInputValue}
+        editNote = {editNote}
+      />
+      <Modal
+        addNote={addNote}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        visible={visible}
+      />
+      <div className='add__button' onClick={() => addNoteButton()}>ADD</div>
     </div>
-    <button onClick={() => addNoteButton()}>+</button>
-  </>
+  )
 }
 
 export default App;
