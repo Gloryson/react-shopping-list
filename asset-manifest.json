@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-sandbox/static/css/main.b9f5a3b0.css",
-    "main.js": "/react-sandbox/static/js/main.30f09e34.js",
+    "main.css": "/react-sandbox/static/css/main.a50aa3d1.css",
+    "main.js": "/react-sandbox/static/js/main.46ec0e4a.js",
     "static/js/787.60ffb363.chunk.js": "/react-sandbox/static/js/787.60ffb363.chunk.js",
     "static/media/add.png": "/react-sandbox/static/media/add.31aeeab60512b8a9f660.png",
     "static/media/edit.png": "/react-sandbox/static/media/edit.a5a08ad00a7c3ded07c5.png",
     "index.html": "/react-sandbox/index.html",
-    "main.b9f5a3b0.css.map": "/react-sandbox/static/css/main.b9f5a3b0.css.map",
-    "main.30f09e34.js.map": "/react-sandbox/static/js/main.30f09e34.js.map",
+    "main.a50aa3d1.css.map": "/react-sandbox/static/css/main.a50aa3d1.css.map",
+    "main.46ec0e4a.js.map": "/react-sandbox/static/js/main.46ec0e4a.js.map",
     "787.60ffb363.chunk.js.map": "/react-sandbox/static/js/787.60ffb363.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9f5a3b0.css",
-    "static/js/main.30f09e34.js"
+    "static/css/main.a50aa3d1.css",
+    "static/js/main.46ec0e4a.js"
   ]
 }
