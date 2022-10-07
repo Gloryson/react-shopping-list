@@ -7,6 +7,8 @@ import '../index.scss';
 
 function Notes ({notes, setNotes, editNote}) {
 
+
+  
   function completeNote (id) {
     setNotes(notes.map(note => {
       if (note.id === id) {
@@ -16,9 +18,19 @@ function Notes ({notes, setNotes, editNote}) {
     }))
   }
 
+
+
   function deleteNote (id) {
-    setNotes(notes.filter(note => note.id != id));
+    setNotes(notes.map(note => {
+      if (note.id === id) note.deleted = true;
+      return note;
+    }))
+    setTimeout(() => {
+      setNotes(notes.filter(note => note.id != id));
+    }, 200);
   }
+
+
 
   return <>
     <div className="notes">
@@ -28,6 +40,7 @@ function Notes ({notes, setNotes, editNote}) {
         value = {note.value}
         id = {note.id}
         completed = {note.completed}
+        deleted = {note.deleted}
         completeNote = {completeNote}
         deleteNote = {deleteNote}
         editNote = {editNote}

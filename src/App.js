@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.scss';
 import db from './db';
 import Notes from './components/Notes';
@@ -15,9 +15,13 @@ function App () {
   const [visible, setVisible] = useState(false);
   const [isEdit, setIsEdit] = useState(null);
 
-  React.useEffect(() => {
+
+
+  useEffect(() => {
     localStorage.setItem('notesArray', JSON.stringify(notes));
   }, [notes]);
+
+
 
   function addNote (inputValue) {
     if (isEdit) {
@@ -33,16 +37,22 @@ function App () {
     setInputValue(``);
   }
 
+
+
   function editNote (id, value) {
     setVisible(true);
     setIsEdit(id);
     setInputValue(value);
   }
 
+
+
   function addNoteButton () {
     setVisible(true);
   }
 
+
+  
   return (
     <div className='container'>
       <Notes

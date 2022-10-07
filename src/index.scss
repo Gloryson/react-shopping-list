@@ -26,6 +26,7 @@
   width: 100%;
   padding: 20px 0 20px 0;
   gap: 3.5px;
+  overflow: hidden;
 }
 
 .note {
@@ -38,6 +39,12 @@
   cursor: default;
   gap: 5px;
   background-color: #ffffff;
+  animation: intro 0.3s linear 1;
+
+  @keyframes intro {
+    0% {transform: translateX(-100vw);}
+    100% {transform: translateX(0);}
+  }
 }
 
 .note__value {
@@ -139,4 +146,9 @@ input:focus {
 
 .off {
   display: none;
+}
+
+.out {
+  transform: translateX(100vw);
+  transition-duration: 0.2s;
 }
