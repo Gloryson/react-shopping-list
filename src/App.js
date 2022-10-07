@@ -22,12 +22,12 @@ function App () {
   function addNote (inputValue) {
     if (isEdit) {
       setNotes(notes.map(note => {
-        if (isEdit === note.id) note.value = inputValue;
+        if (isEdit === note.id && inputValue) note.value = inputValue;
         return note;
       }))
       setIsEdit(null);
     } else {
-      setNotes([...notes, {id: uuid(), completed: false, value: inputValue}]);
+      if (inputValue) setNotes([...notes, {id: uuid(), completed: false, value: inputValue}]);
     }
     setVisible(false);
     setInputValue(``);
