@@ -152,6 +152,10 @@ input:focus {
   transform: translateX(-50%);
   flex-direction: column;
   gap: 15px;
+
+  @media (hover:none) {
+    top: 10%;
+  }
 }
 
 .hint {
