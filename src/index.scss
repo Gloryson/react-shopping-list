@@ -5,9 +5,10 @@
   color: #555555;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-tap-highlight-color: #00000000;
+  font-size: 18px;
 }
 
-.container, .notes, .note, .modal__window, .ok__button {
+.container, .notes, .note, .modal__window, .ok__button, .hints {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,6 +142,20 @@ input:focus {
 
 .ok__button {
   font-weight: 600;
+  cursor: pointer;
+}
+
+.hints {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hint {
+  color: #399a2a;
   cursor: pointer;
 }
 

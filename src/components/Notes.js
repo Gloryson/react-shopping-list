@@ -29,9 +29,14 @@ function Notes ({notes, setNotes, editNote}) {
   return <>
     <div className="notes">
       {notes.map(note => {
-        return <Note key = {note.id} value = {note.value} id = {note.id}
-          completed = {note.completed} deleted = {note.deleted}
-          completeNote = {completeNote} deleteNote = {deleteNote} editNote = {editNote}
+        return <Note key = {note.id}
+          value = {note.value}
+          id = {note.id}
+          completed = {note.completed}
+          deleted = {note.deleted}
+          completeNote = {completeNote}
+          deleteNote = {deleteNote}
+          editNote = {editNote}
         />
       })}
     </div>

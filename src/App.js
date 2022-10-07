@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './index.scss';
-import db from './db';
+import {db, hintsArray} from './db';
 import Notes from './components/Notes';
 import Modal from './components/Modal';
 import uuid from 'react-uuid';
@@ -17,7 +17,8 @@ function App () {
 
   useEffect(() => {
     localStorage.setItem('notesArray', JSON.stringify(notes));
-  }, [notes]);
+    localStorage.setItem('hintsArray', JSON.stringify(hintsArray));
+  }, [notes, hintsArray]);
 
   function addNote (inputValue) {
     if (isEdit) {
@@ -27,7 +28,10 @@ function App () {
       }))
       setIsEdit(null);
     } else {
-      if (inputValue) setNotes([...notes, {id: uuid(), completed: false, value: inputValue}]);
+      if (inputValue) {
+        setNotes([...notes, {id: uuid(), completed: false, value: inputValue}]);
+        hintsArray.push(inputValue);
+      }
     }
     setVisible(false);
     setInputValue(``);
@@ -37,10 +41,6 @@ function App () {
     setVisible(true);
     setIsEdit(id);
     setInputValue(value);
-  }
-
-  function addNoteButton () {
-    setVisible(true);
   }
   
   return (
@@ -52,7 +52,7 @@ function App () {
         setInputValue = {setInputValue}
         editNote = {editNote}
       />
-      <div className='add__button' onClick={() => addNoteButton()}></div>
+      <div className='add__button' onClick={() => setVisible(true)}></div>
       <Modal
         addNote={addNote}
         inputValue={inputValue}
