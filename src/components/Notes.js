@@ -26,7 +26,7 @@ function Notes ({notes, setNotes, editNote}) {
       return note;
     }))
     setTimeout(() => {
-      setNotes(notes.filter(note => note.id != id));
+      setNotes(notes.filter(note => !note.deleted));
     }, 300);
   }
 
