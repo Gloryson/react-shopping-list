@@ -15,13 +15,9 @@ function App () {
   const [visible, setVisible] = useState(false);
   const [isEdit, setIsEdit] = useState(null);
 
-
-
   useEffect(() => {
     localStorage.setItem('notesArray', JSON.stringify(notes));
   }, [notes]);
-
-
 
   function addNote (inputValue) {
     if (isEdit) {
@@ -37,21 +33,15 @@ function App () {
     setInputValue(``);
   }
 
-
-
   function editNote (id, value) {
     setVisible(true);
     setIsEdit(id);
     setInputValue(value);
   }
 
-
-
   function addNoteButton () {
     setVisible(true);
   }
-
-
   
   return (
     <div className='container'>
