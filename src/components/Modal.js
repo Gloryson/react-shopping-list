@@ -6,12 +6,12 @@ import uuid from 'react-uuid';
 
 function Modal ({addNote, inputValue, setInputValue, visible}) {
 
-  const [hints, setHints] = useState(hintsArray.slice(0, 4));
+  const [hints, setHints] = useState(hintsArray.slice(0, 3));
 
   function generateHints (value) {
     setInputValue(value);
     let temp = [...hintsArray].filter(hint => hint.toLowerCase().startsWith(value.toLowerCase()));
-    setHints(temp.length > 4 ? temp.slice(0, 4) : temp);
+    setHints(temp.length > 3 ? temp.slice(0, 3) : temp);
   }
  
   return <>

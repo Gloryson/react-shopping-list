@@ -30,7 +30,7 @@ function App () {
     } else {
       if (inputValue) {
         setNotes([...notes, {id: uuid(), completed: false, value: inputValue}]);
-        hintsArray.push(inputValue);
+        if (!hintsArray.includes(inputValue)) hintsArray.push(inputValue);
       }
     }
     setVisible(false);
