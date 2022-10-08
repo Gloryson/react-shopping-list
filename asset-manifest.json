@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-sandbox/static/css/main.55545fc1.css",
-    "main.js": "/react-sandbox/static/js/main.3abf3bc0.js",
-    "static/js/787.60ffb363.chunk.js": "/react-sandbox/static/js/787.60ffb363.chunk.js",
-    "static/media/add.png": "/react-sandbox/static/media/add.31aeeab60512b8a9f660.png",
-    "static/media/edit.png": "/react-sandbox/static/media/edit.a5a08ad00a7c3ded07c5.png",
-    "index.html": "/react-sandbox/index.html",
-    "main.55545fc1.css.map": "/react-sandbox/static/css/main.55545fc1.css.map",
-    "main.3abf3bc0.js.map": "/react-sandbox/static/js/main.3abf3bc0.js.map",
-    "787.60ffb363.chunk.js.map": "/react-sandbox/static/js/787.60ffb363.chunk.js.map"
+    "main.css": "/react-shopping-list/static/css/main.1c7502fb.css",
+    "main.js": "/react-shopping-list/static/js/main.d8e173fd.js",
+    "static/js/787.108ae265.chunk.js": "/react-shopping-list/static/js/787.108ae265.chunk.js",
+    "static/media/add.png": "/react-shopping-list/static/media/add.31aeeab60512b8a9f660.png",
+    "static/media/edit.png": "/react-shopping-list/static/media/edit.a5a08ad00a7c3ded07c5.png",
+    "index.html": "/react-shopping-list/index.html",
+    "main.1c7502fb.css.map": "/react-shopping-list/static/css/main.1c7502fb.css.map",
+    "main.d8e173fd.js.map": "/react-shopping-list/static/js/main.d8e173fd.js.map",
+    "787.108ae265.chunk.js.map": "/react-shopping-list/static/js/787.108ae265.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55545fc1.css",
-    "static/js/main.3abf3bc0.js"
+    "static/css/main.1c7502fb.css",
+    "static/js/main.d8e173fd.js"
   ]
 }
