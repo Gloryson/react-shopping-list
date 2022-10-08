@@ -1,8 +1,8 @@
 {
-  "name": "react-sandbox",
+  "name": "react-shopping-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gloryson.github.io/react-sandbox/",
+  "homepage": "https://gloryson.github.io/react-shopping-list/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
