@@ -18,7 +18,7 @@ function App () {
   useEffect(() => {
     localStorage.setItem('notesArray', JSON.stringify(notes));
     localStorage.setItem('hintsArray', JSON.stringify(hintsArray));
-  }, [notes, hintsArray]);
+  }, [notes]);
 
   function addNote (inputValue) {
     if (isEdit) {
