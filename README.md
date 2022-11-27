@@ -1,2 +1,2 @@
 # react-shopping-list
-There is nothing interesting here! Just a sandbox for experiments!
+It is just a regular to-do list with localstorage and hints, written in React.
